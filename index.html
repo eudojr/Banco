@@ -1,0 +1,61 @@
+<html>
+<head>
+<title> Banco la Plaza </title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link href="css/hover.css" rel="stylesheet" media="all">
+<div class="header div">
+	<img src="img/logo.png"/>
+	<div class="titulo">Inicio</div>
+		<table>
+			<tr>
+				<td class="hvr-underline-from-center">
+					English
+				</td>
+				<td  class="hvr-underline-from-center">
+					Espa&#241;ol
+				</td>
+			</tr>
+		</table>
+</div>
+</head>
+<body>
+<div id="container">
+<div class="login">
+	<label>Inicio de Sesion:<hr></label>
+	<br>
+	<div>
+		<p>Usuario:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="user" id="user">
+			<br>
+			<br>
+			Contrase&#241;a:&nbsp;&nbsp;&nbsp;<input type="text" name="pass" id="pass">
+			<br><br>
+			<input type="button" class="hvr-sweep-to-left" id="boton_form" value="Iniciar Sesion" onClick="validate()">
+		</p>
+	</div>
+</div>
+</div>
+<div id="footer">
+		<br>
+		Copyright - USMA&#174;
+		</div>
+</body>
+
+<script>
+	function validate(){
+		if (document.getElementById('user').value == 'lbozzo')
+		{
+			sessionStorage.setItem("usuario_tipo","1");
+			window.location.href = 'opciones.html';
+			
+		}
+		else if (document.getElementById('user').value == 'admin'){
+			sessionStorage.setItem("usuario_tipo","2");
+			window.location.href = 'busqueda.html';
+		
+		}
+		else{
+			alert('Usted no posee acceso');
+		}	
+	}
+</script>
+</html>

@@ -1,0 +1,45 @@
+<html>
+<head>
+<title> Banco la Plaza </title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link href="css/hover.css" rel="stylesheet" media="all">
+<div class="header div">
+	<img src="img/logo.png"/>
+	<div class="titulo">Validacion de Cuenta</div>
+</div>
+</head>
+<body>
+<div id="container">
+<div class="login">
+	<label>Introduzca credenciales:<hr></label>
+	<br>
+	<div>
+		<p>Usuario:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="user" id="user">
+			<br>
+			<br>
+			Contrase&#241;a:&nbsp;&nbsp;&nbsp;<input type="text" name="pass" id="pass">
+			<br><br>
+			<input type="button" class="hvr-sweep-to-left" id="boton_form" value="Iniciar Sesion" onClick="validate()">
+		</p>
+	</div>
+</div>
+</div>
+<div id="footer">
+		<br>
+		Copyright - USMA&#174;
+		</div>
+</body>
+
+<script>
+	function validate(){
+		if (document.getElementById('user').value == 'lbozzo')
+		{
+			window.location.href = 'confirmacion.html';
+		}
+		else{
+			alert('Usted no posee acceso');
+			window.location.href = 'index.html';
+		}	
+	}
+</script>
+</html>
